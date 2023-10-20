@@ -8,7 +8,7 @@ it.
 import { ref } from 'vue';
 import { getAuthorHost } from "../utils/fetchData";
 
-const { AEMHeadless } = require('@adobe/aem-headless-client-js')
+import AEMHeadless from '@adobe/aem-headless-client-js'
 const { VUE_APP_GRAPHQL_ENDPOINT } = process.env;
 
 /**

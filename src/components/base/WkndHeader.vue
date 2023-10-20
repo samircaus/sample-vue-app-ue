@@ -11,6 +11,7 @@
 <script>
 import { RouterLink } from 'vue-router';
 import WkndNavMenu from './WkndNavMenu.vue';
+import logoUrl from '../../assets/wknd-logo-dk.svg?url'
 
 export default {
   name: 'WkndHeader',
@@ -20,7 +21,7 @@ export default {
   },
   data() {
     return {
-      logo: require('@/assets/wknd-logo-dk.svg')
+      logo: logoUrl
     }
   }
 }
