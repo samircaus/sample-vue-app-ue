@@ -9,7 +9,6 @@ import { ref } from 'vue';
 import { getAuthorHost } from "../utils/fetchData";
 
 import AEMHeadless from '@adobe/aem-headless-client-js'
-const { VUE_APP_GRAPHQL_ENDPOINT } = process.env;
 
 /**
  * Custom React Hook to perform a GraphQL query
@@ -21,7 +20,7 @@ function useGraphQL(path, variables = {}) {
 
   const sdk = new AEMHeadless({
     serviceURL: getAuthorHost(),
-    endpoint: VUE_APP_GRAPHQL_ENDPOINT
+    endpoint: process.env.VUE_APP_GRAPHQL_ENDPOINT
   });
   const request = sdk.runPersistedQuery.bind(sdk);
 
